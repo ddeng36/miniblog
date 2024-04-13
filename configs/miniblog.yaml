@@ -4,6 +4,10 @@
 # this file is https://github.com/ddeng36.
 
 
+# 通用配置
+runmode: debug               # Gin 开发模式, 可选值有：debug, release, test
+addr: :8081                  # HTTP 服务器监听地址
+
 # MySQL 数据库相关配置
 db:
   host: 127.0.0.1  # MySQL 机器 IP 和端口，默认 127.0.0.1:3306
@@ -22,3 +26,4 @@ log:
   level: debug # 指定日志级别，可选值：debug, info, warn, error, dpanic, panic, fatal
   format: console # 指定日志显示格式，可选值：console, json
   output-paths: [./tmp/miniblog.log, stdout] # 指定日志输出位置，多个输出，用 `逗号 + 空格` 分开。stdout：标准输出，
+

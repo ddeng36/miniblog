@@ -18,11 +18,11 @@ tmp_dir = "tmp"
 
 [build]
 # Array of commands to run before each build
-pre_cmd = ["echo 'hello air' > pre_cmd.txt"]
+pre_cmd = []
 # Just plain old shell command. You could use `make` as well.
 cmd = "go build -o _output/miniblog -v ./cmd/miniblog/main.go"
 # Array of commands to run after ^C
-post_cmd = ["echo 'hello air' > post_cmd.txt"]
+post_cmd = []
 # Binary file yields from `cmd`.
 bin = "_output/miniblog"
 # Customize binary, can setup environment variables when run your app.

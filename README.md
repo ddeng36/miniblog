@@ -32,6 +32,8 @@ $ _output/miniblog --version=raw -c configs/miniblog.yaml
 version.Info{GitVersion:"f9bcff9", GitCommit:"f9bcff93cc300b8e00de1789d89eb5ffd2b13dfe", GitTreeState:"clean", BuildDate:"2022-12-12T11:59:45Z", GoVersion:"go1.19.4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
+- 使用gin构建简单web服务
+
 
 ## 日志规范
 
