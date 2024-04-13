@@ -5,8 +5,19 @@
 
 package main
 
-import "fmt"
+import (
+	"os"
 
+	 "github.com/ddeng36/miniblog/internal/miniblog"
+	_ "go.uber.org/automaxprocs"
+)
+
+/*
+miniblog程序的默认入口函数
+*/
 func main() {
-	fmt.Println("Hello MYBLOG111!")
+	command := miniblog.NewMiniBlogCommand()
+	if err := command.Execute(); err != nil {
+		os.Exit(1)
+	}
 }
