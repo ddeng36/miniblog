@@ -8,7 +8,9 @@ package miniblog
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/ddeng36/miniblog/internal/pkg/log"
+	"github.com/ddeng36/miniblog/pkg/version/verflag"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -31,6 +33,10 @@ func NewMiniBlogCommand() *cobra.Command {
 		SilenceUsage: true,
 		// 指定调用 cmd.Execute() 时，执行的 Run 函数，函数执行失败会返回错误信息
 		RunE: func(cmd *cobra.Command, args []string) error {
+
+			// 如果 `--version=true`，则打印版本并退出
+			verflag.PrintAndExitIfRequested()
+
 			// 初始化日志
 			log.Init(logOptions())
 			defer log.Sync() // Sync 将缓存中的日志刷新到磁盘文件中
@@ -59,6 +65,7 @@ func NewMiniBlogCommand() *cobra.Command {
 
 	// Cobra 也支持本地标志，本地标志只能在其所绑定的命令上使用
 	cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	verflag.AddFlags(cmd.PersistentFlags())
 
 	return cmd
 }

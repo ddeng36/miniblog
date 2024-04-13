@@ -2,9 +2,9 @@
 ## Libraries
 - 使用air进行热更新和启动
 ```
-air ./.air.toml
 air
 ```
+
 - 使用cobra构建应用，执行可执行文件时可以加参数选项
 ```
 make
@@ -16,6 +16,22 @@ make
 - 使用viper读取配置文件，并配置
 
 - 基于zap定制日志包
+
+- 使用verflag添加版本号
+```
+$ make
+$ _output/miniblog --version -c configs/miniblog.yaml
+  gitVersion: f9bcff9
+   gitCommit: f9bcff93cc300b8e00de1789d89eb5ffd2b13dfe
+gitTreeState: clean
+   buildDate: 2022-12-12T11:59:45Z
+   goVersion: go1.19.4
+    compiler: gc
+    platform: linux/amd64
+$ _output/miniblog --version=raw -c configs/miniblog.yaml
+version.Info{GitVersion:"f9bcff9", GitCommit:"f9bcff93cc300b8e00de1789d89eb5ffd2b13dfe", GitTreeState:"clean", BuildDate:"2022-12-12T11:59:45Z", GoVersion:"go1.19.4", Compiler:"gc", Platform:"linux/amd64"}
+```
+
 
 ## 日志规范
 

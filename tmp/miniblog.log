@@ -1,0 +1,4 @@
+2024-04-13 22:12:06.793	info	miniblog/miniblog.go:79	{"db":{"database":"miniblog","host":"127.0.0.1","log-level":4,"max-connection-life-time":"10s","max-idle-connections":100,"max-open-connections":100,"password":"miniblog1234","username":"miniblog"},"log":{"disable-caller":false,"disable-stacktrace":false,"format":"console","level":"debug","output-paths":["./tmp/miniblog.log","stdout"]}}
+2024-04-13 22:12:06.793	info	miniblog/miniblog.go:81	miniblog
+2024-04-13 22:14:42.740	info	miniblog/miniblog.go:79	{"db":{"database":"miniblog","host":"127.0.0.1","log-level":4,"max-connection-life-time":"10s","max-idle-connections":100,"max-open-connections":100,"password":"miniblog1234","username":"miniblog"},"log":{"disable-caller":false,"disable-stacktrace":false,"format":"console","level":"debug","output-paths":["./tmp/miniblog.log","stdout"]}}
+2024-04-13 22:14:42.740	info	miniblog/miniblog.go:81	miniblog
