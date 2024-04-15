@@ -33,7 +33,7 @@ version.Info{GitVersion:"f9bcff9", GitCommit:"f9bcff93cc300b8e00de1789d89eb5ffd2
 ```
 
 - 使用gin构建简单web服务
-
+- 添加NoCache，Secure，Cors等中间件
 
 ## 日志规范
 
