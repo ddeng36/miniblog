@@ -18,9 +18,12 @@ import (
 	"github.com/gin-gonic/gin"
 	mw "github.com/ddeng36/miniblog/internal/pkg/middleware"
 	"github.com/ddeng36/miniblog/internal/pkg/log"
+	"github.com/ddeng36/miniblog/internal/pkg/core"
+	"github.com/ddeng36/miniblog/internal/pkg/errno"
 	"github.com/ddeng36/miniblog/pkg/version/verflag"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+
 )
 
 var cfgFile string
@@ -101,13 +104,13 @@ func run() error {
 
 	// 注册 404 Handler.
 	g.NoRoute(func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"code": 10003, "message": "Page not found."})
+		core.WriteResponse(c, errno.ErrPageNotFound, nil)
 	})
 
 	// 注册 /healthz handler.
 	g.GET("/healthz", func(c *gin.Context) {
 		log.C(c).Infow("Healthz function called")
-		c.JSON(http.StatusOK, gin.H{"status": "ok"})
+		core.WriteResponse(c, nil, map[string]string{"status": "ok"})
 	})
 
 	// 创建 HTTP Server 实例
