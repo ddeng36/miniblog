@@ -6,7 +6,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/marmotedu/miniblog/internal/pkg/model"
+	"github.com/ddeng36/miniblog/internal/pkg/model"
 )
 
 // UserStore 定义了 user 模块在 store 层所实现的方法.

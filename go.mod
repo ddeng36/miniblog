@@ -3,6 +3,7 @@ module github.com/ddeng36/miniblog
 go 1.19
 
 require (
+	github.com/jinzhu/copier v0.3.5
 	// github.com/google/uuid v1.1.2
 	github.com/gin-gonic/gin v1.9.1
 	github.com/gosuri/uitable v0.0.4
