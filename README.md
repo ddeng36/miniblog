@@ -4,7 +4,10 @@
 ```
 air
 ```
-
+-使用mariadb作为数据库
+```
+mysql -h127.0.0.1 -P3306 -uroot -p'miniblog1234'
+```
 - 使用cobra构建应用，执行可执行文件时可以加参数选项
 ```
 make

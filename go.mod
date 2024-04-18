@@ -11,9 +11,14 @@ require (
 	github.com/spf13/viper v1.18.2
 	go.uber.org/automaxprocs v1.5.1
 	go.uber.org/zap v1.21.0
+	gorm.io/driver/mysql v1.4.4
+	gorm.io/gorm v1.24.2
 )
 
 require (
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/fatih/color v1.14.1 // indirect
@@ -61,4 +66,13 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+require (
+	github.com/Shelnutt2/db2struct v1.0.2 // indirect
+	github.com/droundy/goopt v0.0.0-20170604162106-0b8effe182da // indirect
+	github.com/go-sql-driver/mysql v1.4.1 // indirect
+	github.com/howeyc/gopass v0.0.0-20170109162249-bf9dde6d0d2c // indirect
+	golang.org/x/term v0.15.0 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
 )
