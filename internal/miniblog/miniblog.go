@@ -85,6 +85,11 @@ func NewMiniBlogCommand() *cobra.Command {
 实际业务入口
 */
 func run() error {
+	// 初始化store层
+	if err := initStore(); err != nil {
+		return err
+	}
+
 	// 打印所有的配置项及其值
 	settings, _ := json.Marshal(viper.AllSettings())
 	log.Infow(string(settings))
